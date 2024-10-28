@@ -1,0 +1,160 @@
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+body{
+   font-size: 15px;
+   background-color: #222222;
+   color: #000;
+   font-weight: 400;
+   font-family: sans-serif;
+   transition: all 0.2s ease;
+}
+.container{
+   max-width: 1140px;
+   width: 100%;
+   margin: 0 auto;
+   padding: 3rem 0;
+   min-height: 100vh;
+   display: grid;
+   place-items: center;
+}
+.card{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 60px;
+   justify-content: center;
+   width: 100%;
+   max-width: 90%;
+   margin: auto;
+   padding: 60px 0;
+}
+.box{
+   --dark:#2e2e2e;
+   --dark-alt:#777777;
+   --button:#333333;
+   --white:#fff;
+   --transition:0.5s ease-in-out;
+
+   height: 350px;
+   width: 300px;
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: var(--dark);
+   transition: var(--transition);
+}
+.box::before,
+.box::after{
+   content: "";
+   position: absolute;
+   z-index: -1;
+   transition: var(--transition);
+   border-bottom: 4px solid var(--clr);
+}
+.box::before{
+   inset: -10px 50px;
+   border-top: 4px solid var(--clr);
+   transform: skewY(15deg);
+   border-bottom: 4px solid var(--clr);
+}
+.box:hover::before{
+   inset: -10px 40px;
+   transform: skewY(0deg);
+}
+.box::after{
+   inset: 60px -10px;
+   border-left: 4px solid var(--clr);
+   transform: skew(15deg);
+   border-right: 4px solid var(--clr);
+}
+.box:hover::after{
+   inset: 40px -10px;
+   transform: skew(0deg);
+}
+.box .data{
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 30px;
+   text-align: center;
+   padding: 0 20px;
+   height: 100%;
+   width: 100%;
+   overflow: hidden;
+}
+.box .data .icon{
+   height: 80px;
+   width: 80px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 3rem;
+   color: #000;
+   caret-color: var(--dark);
+   transition: var(--transition);
+   color: var(--clr);
+   box-shadow:  0 0 4px var(--dark), 0 0 0 6px var(--clr);
+}
+.box:hover .data .icon{
+   color: var(--dark);
+   background-color: var(--clr);
+   box-shadow: 0 0 4px var(--dark), 0 0 0 300px var(--clr);
+}
+.content{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 10px;
+}
+h3{
+   font-size: 1.5rem;
+   font-weight: 500;
+   color: var(--white);
+   transition: var(--transition);
+}
+.box:hover .data h3{
+   color: var(--dark);
+   transition: var(--transition);
+}
+p{
+   font-size: 0.9rem;
+   color: var(--dark-alt);
+   transition: var(--transition);
+}
+.box:hover .data p{
+   color: var(--dark);
+   transition: var(--transition);
+}
+a{
+   position: relative;
+   display: inline-block;
+   padding: 8px 15px;
+   text-decoration: none;
+   font-weight: 500;
+   margin-top: 10px;
+   border: 2px solid var(--clr);
+   color: var(--dark);
+   background-color: var(--clr);
+   transition: var(--transition);
+   border-radius: 10px;
+}
+.box:hover .data a{
+   color: var(--clr);
+   background-color: var(--dark);
+}
+.box:hover .data a:hover{
+   border-color: var(--dark);
+   color: var(--dark);
+   background-color: var(--clr);
+}
+@media screen and (min-width: 965px){
+   body{
+      font-size: 1rem;
+   }
+}
