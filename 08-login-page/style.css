@@ -1,0 +1,146 @@
+*{
+   margin: 0;
+   padding: 0;
+   color: #fff;
+   font-family: Arial, Helvetica, sans-serif;
+}
+body{
+   width: 95vw;
+   height: 95vh;
+   background: #24263d;
+   display: grid;
+   justify-content: center;
+   align-items: center;
+}
+::-webkit-input-placeholder{
+   color: #eee;
+}
+.container{
+   position: relative;
+   width: 800px;
+   height: 65vh;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   border: 3px solid gold;
+   box-shadow: 0 0 50px #bca000;
+}
+.form{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.title{
+   font-size: 35px;
+}
+.inpu{
+   padding-bottom: 10px;
+   border-bottom: 2px solid #eee;
+}
+input{
+   border: none;
+   outline: none;
+   background: none;
+   width: 260px;
+   padding-top: 40px;
+   padding-right: 10px;
+   font-size: 17px;
+   color: gold;
+}
+.submit{
+   border: none;
+   outline: none;
+   width: 288px;
+   margin-top: 25px;
+   padding: 10px 0;
+   font-size: 20px;
+   border-radius: 40px;
+   letter-spacing: 1px;
+   cursor: pointer;
+   background: linear-gradient(45deg, #affa01, #06d8fd);
+
+}
+.footer{
+   margin-top: 30px;
+   letter-spacing: 0.5px;
+   font-size: 14px;
+}
+.link{
+   color: gold;
+   text-decoration: none;
+}
+.banner{
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 450px;
+   height: 100%;
+   background: linear-gradient(to right, #057c94, gold);
+   clip-path: polygon(0 0,100% 0, 100% 100%, 60% 100%);
+   padding-right: 70px;
+   text-align: right;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-end;
+}
+.welcome{
+   font-size: 35px;
+   margin-top: -50px;
+   line-height: 50px;
+   animation: anim 1.5s infinite;
+}
+@keyframes anim {
+   0%{transform: scale(1) rotate(0deg);}
+   25%{transform: scale(1.2) rotate(5deg);}
+   50%{transform: scale(1) rotate(0deg);}
+   75%{transform: scale(1.2) rotate(-5deg);}
+   100%{transform: scale(1) rotate(0deg);}
+}
+.parag{
+   margin-top: 13px;
+   font-size: 18px;
+   line-height: 24px;
+   letter-spacing: 1px;
+}
+
+/* Make responsive */
+
+@media(max-width: 800px){
+   .container{
+      width: 90%;
+      height: auto;
+      grid-template-columns: 1fr;
+   }
+   .banner{
+      position: relative;
+      width: 85%;
+      height: 80%;
+      clip-path: none;
+      padding-right: 0;
+      padding: 20px;
+      align-items: center;
+      text-align: center;
+   }
+   .welcome{
+      font-size: 30px;
+      margin-top: 0;
+      line-height: 40px;
+   }
+   .parag{
+      font-size: 16px;
+      line-height: 22px;
+   }
+   .form{
+      padding: 20px;
+   }
+   .input{
+      width: 85%;
+   }
+   .submit{
+      width: 90%;
+   }
+   .footer{
+      font-size: 11px;
+   }
+}
