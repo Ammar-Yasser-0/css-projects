@@ -1,0 +1,51 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: sans-serif;
+}
+body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   background: #7F66FF;
+}
+.container{
+   position: relative;
+   width: 325px;
+   height: 50px;
+}
+.container h2{
+   position: absolute;
+   top: -40px;
+   font-size: 1.25em;
+   color: white;
+   font-weight: 500;
+}
+.container h2 span{
+   font-weight: 600;
+}
+.container input{
+   position: absolute;
+   inset: 2px;
+   z-index: 10;
+   border: none;
+   outline: none;
+   padding: 12px 15px;
+   color: white;
+   background: #7F66FF;
+   border-radius: 10px;
+}
+.container .pass-str{
+   position: absolute;
+   inset: 0;
+   background: #111;
+   border-radius: 11px;
+}
+.pass-str:nth-child(3){
+   filter: blur(5px);
+}
+.pass-str:nth-child(4){
+   filter: blur(6px);
+}

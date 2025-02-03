@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+   <!-- awesome icons -->
+<script src="https://kit.fontawesome.com/34b969cc36.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div class="container" id="container">
+      <div class="form-container sign_up">
+         <form action="#">
+            <h1>Create Account</h1>
+            <div class="social-icons">
+               <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+               <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
+               <a href="#" class="icon"><i class="fa-brands fa-instagram"></i></a>
+               <a href="#" class="icon"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <span>or use your email for registration</span>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button>Sign Up</button>
+         </form>
+      </div>
+      <div class="form-container sign_in">
+         <form action="#">
+            <h1>Log In</h1>
+            <div class="social-icons">
+               <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+               <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
+               <a href="#" class="icon"><i class="fa-brands fa-instagram"></i></a>
+               <a href="#" class="icon"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <span>or use your email for registration</span>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button>Sign In</button>
+         </form>
+      </div>
+      <div class="toggle_container">
+         <div class="toggle">
+            <div class="toggle-panel toggle_left">
+               <h1>Welcome Back!</h1>
+               <p>Sign in to access all the features and personalized content waiting for you.</p>
+               <button class="hidden" id="login">Sign In</button>
+            </div>
+            <div class="toggle-panel toggle_right">
+               <h1>Hello Users!</h1>
+               <p>Create an account to unlock all the features and personalized content waiting for you.</p>
+               <button class="hidden" id="register">Sign Up</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script>
+      const container = document.getElementById('container');
+      const registerBtn = document.getElementById('register');
+      const login = document.getElementById('login');
+
+      registerBtn.addEventListener('click', () =>{
+         container.classList.add("active");
+      });
+
+      login.addEventListener('click',() =>{
+         container.classList.remove("active");
+      });
+   </script>
+</body>
+</html>
