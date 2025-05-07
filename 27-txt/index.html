@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Text Animation</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="text">Text Animation</div>
+   <script>
+      let text = document.querySelector(".text");
+      let string = text.textContent;
+      let arr = string.split("");
+
+      text.innerHTML = ("");
+      arr.forEach((char)=>{
+         let spanTag = `<span class="split-char">${char}</span>`;
+         text.insertAdjacentHTML("beforeend", spanTag);
+      });
+   </script>
+</body>
+</html>
