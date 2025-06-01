@@ -1,0 +1,23 @@
+@font-face {
+   font-family: Metrolin;
+   src: url(metrolin/Metrolin\ DEMO\ VERSION.otf);
+}
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+.container{
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: aliceblue;
+}
+h1{
+   font-family: 'Metrolin', serif;
+   letter-spacing: 0.1rem;
+   color: rgb(141, 39, 39);
+   font-weight: 500;
+}
