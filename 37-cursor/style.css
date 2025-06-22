@@ -1,0 +1,34 @@
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+.container{
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #030217;
+}
+.star{
+   position: fixed;
+   pointer-events: none;
+}
+.star::before,
+.star::after{
+   position: absolute;
+   top: 0;
+   left: 0;
+   content: '\2726';
+   font-size: 9px;
+}
+.star::before{
+   color: transparent;
+   text-shadow: 0 0 3px #F5E8D5;
+}
+.star::after{
+   background-color: #F5E8D5;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
